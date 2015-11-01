@@ -12,10 +12,18 @@
           templateUrl: 'source/scripts/partials/event-list.html',
           controller: 'EventController'
         })
+        .when('/events/add', {
+          templateUrl: 'source/scripts/partials/event-add.html',
+          controller: 'EventAddController'
+        })
         .when('/events/:id', {
           templateUrl: 'source/scripts/partials/event-detail.html',
           controller: 'EventDetailController'
-        });
+        })
+        .when('/events/:id/guest/add', {
+          templateUrl: 'source/scripts/partials/guest-add.html',
+          controller: 'GuestAddController'
+        })
 
       $locationProvider.html5Mode(true);
 
@@ -29,8 +37,14 @@
       getOne: function(eventId, callback) {
         $http.get('/api/events/' + eventId).success(callback);
       },
+      addEvent: function(event, callback) {
+        $http.post('/api/events/', {id : event.id, name : event.name, description : event.description, targetGroup : event.targetGroup, contributionDescription : event.contributionsDescription, location : event.location, times : event.times}).success(callback);
+      },
       deleteGuestFromEvent: function(eventId, guestId, callback) {
         $http.delete('/api/events/' + eventId + "/guests/" + guestId).success(callback);
+      },
+      addGuestToEvent: function(eventId, guest, callback) {
+        $http.post('/api/events/' + eventId + '/guests', {id : guest.id, name : guest.name, contribution : guest.contribution, comment : guest.comment}).success(callback);
       }
     }
   });
@@ -38,7 +52,12 @@
   app.controller('EventController', function($scope, $location, $timeout, Event) {
     Event.getAll(function(data) {
       $scope.events = data;
+      $scope.events.length = data.events.length;
     });
+
+    $scope.switchToEventAdd = function() {
+      $location.url("/events/add");
+    }
 
     $scope.switchToEventDetail = function(event) {
       $location.url("/events/" + event.id);
@@ -56,6 +75,32 @@
         $timeout(function() {
           $scope.event = data;
         }, 500);
+      });
+    };
+
+    $scope.switchtToGuestAdd = function(eventId) {
+      $location.url("/events/" + eventId + "/guest/add");
+    }
+  });
+
+  app.controller('EventAddController', function($scope, $location, Event) {
+    $scope.master = {};
+
+    $scope.create = function(event) {
+      $scope.master = angular.copy(event);
+      Event.addEvent(event, function(data) {
+        $location.url("/events/");
+      });
+    };
+  });
+
+  app.controller('GuestAddController', function($scope, $location, $routeParams, Event) {
+    $scope.master = {};
+
+    $scope.create = function(guest) {
+      $scope.master = angular.copy(guest);
+      Event.addGuestToEvent($routeParams.id, guest, function(data) {
+        $location.url("/events/" + $routeParams.id);
       });
     };
   });

@@ -1,17 +1,33 @@
-<div class="events-container col-md-4 col-md-offset-4">
+<div class="events-container col-md-6 col-md-offset-3">
     <div class="events-header">
-        <h2 class="events-title">Events</h2>
+        <h2 class="events-title">Event Overview</h2>
+        <div class="event-nav">
+            <button class="btn btn-default" ng-click="switchToEventAdd()">
+                add event <span class="badge">{{ events.length }}</span>
+            </button>
+        </div>
     </div>
     <div class="event-container" ng-repeat="event in events.events" ng-click="switchToEventDetail(event)">
         <div class="event-header">
-            <h2 class="event-title">Event ID {{ event.id }}</h2>
+            <h2 class="event-title">Event Id {{ event.id }}</h2>
         </div>
         <div class="event-body">
             <div class="event">
-                <div class="event-row">{{ event.times.begin | date : 'dd.MM.yy HH:mm:ss' }}</div>
-                <div class="event-row">{{ event.name }}</div>
-                <div class="event-row">{{ event.location.name }}, {{ event.location.street }}</div>
-                <div class="event-row">{{ event.location.city }}</div>
+                <div class="form-group">
+                    <label class="control-label">Begin:</label>
+                    <div>{{ event.times.begin | date : 'dd.MM.yy HH:mm:ss' }}<div></div>
+                <div class="form-group">
+                    <label class="control-label">Name:</label>
+                    <div>{{ event.name }}</div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Location:</label>
+                    <div>{{ event.location.name }}, {{ event.location.street }}</div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Location City:</label>
+                    <div>{{ event.location.city }}</div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,18 +1,59 @@
-<div class="events-container col-md-4 col-md-offset-4">
+<div class="events-container col-md-6 col-md-offset-3">
     <div class="events-header">
-        <h2 class="events-title">Events</h2>
+        <h2 class="events-title">Add event</h2>
     </div>
-    <div class="event-container" ng-repeat="event in events.events" ng-click="switchToEventDetail(event)">
+    <div class="event-container">
         <div class="event-header">
-            <h2 class="event-title">Event ID {{ event.id }}</h2>
+            <h2 class="event-title">New event</h2>
         </div>
         <div class="event-body">
-            <div class="event">
-                <div class="event-row">{{ event.times.begin | date : 'dd.MM.yy HH:mm:ss' }}</div>
-                <div class="event-row">{{ event.name }}</div>
-                <div class="event-row">{{ event.location.name }}, {{ event.location.street }}</div>
-                <div class="event-row">{{ event.location.city }}</div>
-            </div>
+            <form>
+                <div class="form-group">
+                    <label class="control-label">Name:</label>
+                    <input class="form-control" type="text" placeholder="Name" ng-model="event.name"  required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Description:</label>
+                    <input class="form-control" type="text" placeholder="Description" ng-model="event.description" required  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Begin:</label>
+                    <input class="form-control" type="datetime" placeholder="Begin" ng-model="event.times.begin"  required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">End:</label>
+                    <input class="form-control" type="datetime" placeholder="End" ng-model="event.times.end"  required  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Target group:</label>
+                    <input class="form-control" type="text" placeholder="Target group" ng-model="event.targetGroup"   required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Contribution description:</label>
+                    <input class="form-control" type="text" placeholder="Contribution description" ng-model="event.contributionsDescription"  required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Max. amount of guests:</label>
+                    <input class="form-control" type="text" placeholder="Maximal amount of guests" ng-model="event.maximalAmountOfGuests" required  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Location name:</label>
+                    <input class="form-control" type="text" placeholder="Location name" ng-model="event.location.name" required  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Location street:</label>
+                    <input class="form-control" type="text" placeholder="Location street" ng-model="event.location.street" required  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Loccation city:</label>
+                    <input class="form-control" type="text" placeholder="Location city" ng-model="event.location.city"  required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Location plz:</label>
+                    <input class="form-control" type="text" placeholder="Location plz" ng-model="event.location.plz" required  />
+                </div>
+                <div class="form-group rightalign"><input class="btn btn-default" type="submit" ng-click="create(event)" value="Save"  required /></div>
+            </form>
         </div>
     </div>
 </div>

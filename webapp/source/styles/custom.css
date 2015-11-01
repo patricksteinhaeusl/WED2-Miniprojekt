@@ -1,14 +1,93 @@
+body {
+  background: url('../images/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  color: white;
+}
+
+/*boostrap override */
+.container {
+  padding: 5em 5em 5em 5em;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron a {
+  color: lightgreen;
+}
+
+.btn-default {
+  background: lightgreen;
+}
+
+.btn-default:hover {
+  background: darkgreen;
+  color: white;
+  border: solid 1px darkgreen;
+}
+
 .events-container {
-  padding: 2em 1em 2em 1em;
+  padding: 1em 0em 5em 0em;
   text-align: center;
-  background: green;
+  border-radius: 1.5em;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.event-container.event-container {
-  padding: 2em 1em 2em 1em;
-  background: yellow;
+.events-container .event-title {
+  font-size: 150%;
 }
 
-.event-container.event-container:nth-child(2) {
-  background: gray;
+.events-container .event-nav {
+  padding: 1em 3em 1em 3em;
+  text-align: left;
+}
+
+.events-container .event-container {
+
+  padding: 1em 3em 1em 3em;
+  background: rgba(0, 0, 0, 0);;
+}
+
+.events-container .event-container:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.events-container .event-container:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.5);
+  color: lightgreen;
+}
+
+.events-container .event-container:nth-child(2n):hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.events-container .event-container .guest-body {
+  background: white;
+  color: darkgreen;
+  padding: 2.5em 1em 2.5em 1em;
+  margin: 2em 0em 2em 0em;
+}
+
+label {
+  width: 100%;
+  text-align: left;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+input {
+  margin: 0em 0em 2em 0em;
+}
+
+.leftalign {
+  text-align: left;
+}
+
+.rightalign {
+  text-align: right;
 }

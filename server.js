@@ -213,8 +213,8 @@ app.post('/api/events/:id/guests', function(request, response) {
     if(event){
         response.json(createGuest(
             event,
-			request.body.id,
-			request.body.name,
+			      request.body.id,
+			      request.body.name,
             request.body.contribution,
             request.body.comment
         ));
