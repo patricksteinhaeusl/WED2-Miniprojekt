@@ -1,6 +1,36 @@
-<h1>Event-Detail</h1>
-
-<ul>
-    <li>{{ event.id }}</li>
-    <li>{{ event.name }}</li>
-</ul>
+<div class="events-container col-md-4 col-md-offset-4">
+    <div class="events-header">
+        <h2 class="events-title">Event Detail</h2>
+    </div>
+    <div class="event-container">
+        <div class="event-header">
+            <h2 class="event-title">Event ID {{ event.id }}</h2>
+        </div>
+        <div class="event-body">
+            <div class="event-row">{{ event.name }} {{ event.guests.length }}</div>
+            <div class="event-row">{{ event.times.begin | date : 'dd.MM.yy HH:mm:ss' }} - {{ event.times.end | date : 'dd.MM.yy HH:mm:ss' }}</div>
+            <div class="event-row">Target group: {{ event.targetGroup }}</div>
+            <div class="event-row">Contribution description: {{ event.contributionsDescription }}</div>
+            <div class="event-row">Max amount: {{ event.maximalAmoutOfGuests }}</div>
+            <div class="event-row">Location: {{ event.location.name }}</div>
+            <div class="event-row">{{ event.location.street }}</div>
+            <div class="event-row">{{ event.location.city }} , {{ event.location.plz }}</div>
+            <div class="event-row">
+                <span>Guests</span>
+                <button type="button" class="btn btn-primary">
+                    add <span class="badge">{{ event.guests.length }}</span>
+                </button>
+            </div>
+            <div class="event-row" ng-repeat="guest in event.guests">
+                <div class="event-guest-row" ng-show="guest.name">{{ guest.name }}</div>
+                <div class="event-guest-row" ng-show="guest.canceled"><input type="checkbox" ng-true-value="{{ guest.canceled }}" /></div>
+                <div class="event-guest-row" ng-show="guest.comment">{{ guest.comment }}</div>
+                <div class="event-guest-row">
+                    <button type="button" class="btn btn-primary" ng-show="guest" ng-click="deleteGuestFromEvent(event.id, guest.id)">
+                        remove <span class="glyphicon glyphicon-remove-sign"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

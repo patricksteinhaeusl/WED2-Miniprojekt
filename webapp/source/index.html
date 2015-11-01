@@ -5,6 +5,7 @@
         <base href="/">
 		<title>Lafete</title>
         <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/custom.css">
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
@@ -16,6 +17,12 @@
         <script type="text/javascript" src="scripts/modules/app.js"></script>
 	</head>
     <body>
-        <div ng-view=""></div>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Lafete</h1>
+                <p>Welcome to our Event Managing Website.</p>
+            </div>
+            <div ng-view=""></div>
+        </div>
 	</body>
 </html>

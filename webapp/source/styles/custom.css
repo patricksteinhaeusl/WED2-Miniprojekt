@@ -1,0 +1,14 @@
+.events-container {
+  padding: 2em 1em 2em 1em;
+  text-align: center;
+  background: green;
+}
+
+.event-container.event-container {
+  padding: 2em 1em 2em 1em;
+  background: yellow;
+}
+
+.event-container.event-container:nth-child(2) {
+  background: gray;
+}

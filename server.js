@@ -60,6 +60,21 @@ function createGuest(event, id, name, contribution, comment){
     }
 }
 
+// Added - Delete Guest From Event
+function deleteGuest(event, guest){
+  if(event && guest) {
+    event.guests.forEach(function(element, index, array) {
+      if(element.id === guest.id) {
+        event.guests.splice(index, 1);
+        return event;
+      }
+    });
+    return event;
+  } else {
+    return null;
+  }
+}
+
 function findGuest(event, guestId) {
 	return event.guests.filter(function(guest) {
 		return guest.id == guestId
@@ -247,6 +262,22 @@ app.post('/api/events/:eventId/guests/:guestId', function(request, response) {
 	} else{
 		response.status(404).send('Event (id '+request.params.eventId+') not found.')
 	}
+});
+
+//Add Delete Guest From Event
+app.delete('/api/events/:eventId/guests/:guestId', function(request, response) {
+  var event = findEvent(request.params.eventId);
+  if(event){
+    var guest = findGuest(event, request.params.guestId);
+    if(guest) {
+      deleteGuest(event, guest);
+      response.json(event);
+    } else {
+      response.status(404).send('Guest (id '+request.params.guestId+') not found.')
+    }
+  } else{
+    response.status(404).send('Event (id '+request.params.eventId+') not found.')
+  }
 });
 
 app.get('*', function(req, res) {
