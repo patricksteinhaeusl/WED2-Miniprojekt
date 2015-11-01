@@ -1,0 +1,7 @@
+<h1>Event-List</h1>
+
+<ul ng-repeat="event in events.events">
+    <li>{{ event.id }}</li>
+    <li>{{ event.name }}</li>
+    <a href="/events/{{ event.id }}">Event-Details</a>
+</ul>

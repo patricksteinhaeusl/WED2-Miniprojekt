@@ -249,6 +249,9 @@ app.post('/api/events/:eventId/guests/:guestId', function(request, response) {
 	}
 });
 
+app.get('*', function(req, res) {
+  res.redirect('/');
+});
 
 /**
  * Server start

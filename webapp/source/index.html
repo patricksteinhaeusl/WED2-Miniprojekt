@@ -1,20 +1,21 @@
-<!doctype html>
-<html lang="de">
+<!DOCTYPE html>
+<html lange="de" ng-app="lafete">
 	<head>
 		<meta charset="utf-8" />
+        <base href="/">
 		<title>Lafete</title>
-		<script src="./frameworks/angular/angular.min.js"></script>
-	</head>
-	<body>
-		<div data-ng-app>
-			<h2>Events</h2>
-			<p><strong>TODO</strong> implement app.</p>
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
 
-			<h3>API to use</h3>
-			<dl data-ng-init="apiRoutes = [{name:'events', url:'/api/events'}, {name:'event 1', url:'/api/events/1'}, {name:'guests of event 1', url:'/api/events/1/guests'}]">
-				<dt data-ng-repeat-start="apiRoute in apiRoutes" data-ng-bind="apiRoute.name"></dt>
-				<dd data-ng-repeat-end><a href="{{ apiRoute.url}}">{{apiRoute.url}}</a></dd>
-			</dl>
-		</div>
-	<body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="frameworks/angular/angular.min.js"></script>
+        <script type="text/javascript" src="frameworks/angular/angular-resource.min.js"></script>
+        <script type="text/javascript" src="frameworks/angular/angular-route.min.js"></script>
+
+        <script type="text/javascript" src="scripts/modules/app.js"></script>
+	</head>
+    <body>
+        <div ng-view=""></div>
+	</body>
 </html>
