@@ -20,6 +20,10 @@
           templateUrl: 'source/scripts/partials/event-detail.html',
           controller: 'EventDetailController'
         })
+        .when('/events/:id/edit', {
+          templateUrl: 'source/scripts/partials/event-edit.html',
+          controller: 'EventEditController'
+        })
         .when('/events/:id/guest/add', {
           templateUrl: 'source/scripts/partials/guest-add.html',
           controller: 'GuestAddController'
@@ -81,17 +85,26 @@
     $scope.switchtToGuestAdd = function(eventId) {
       $location.url("/events/" + eventId + "/guest/add");
     }
+
+    $scope.switchtToEventEdit = function(eventId) {
+      $location.url("/events/" + eventId + "/edit");
+    }
   });
 
   app.controller('EventAddController', function($scope, $location, Event) {
-    $scope.master = {};
-
     $scope.create = function(event) {
       $scope.master = angular.copy(event);
       Event.addEvent(event, function(data) {
         $location.url("/events/");
       });
     };
+  });
+
+  app.controller('EventEditController', function($scope, $location, Event) {
+    console.log("blub");
+    Event.getOne(event.id, function(data) {
+      console.log(data);
+    });
   });
 
   app.controller('GuestAddController', function($scope, $location, $routeParams, Event) {

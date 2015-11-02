@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="138bd9e3-b816-4759-b053-f7a11bc279df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/source/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/source/images/user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/source/scripts/partials/guest-add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/source/scripts/partials/event-edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/scripts/modules/app.js" afterPath="$PROJECT_DIR$/webapp/source/scripts/modules/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/styles/custom.css" afterPath="$PROJECT_DIR$/webapp/source/styles/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/scripts/partials/event-add.html" afterPath="$PROJECT_DIR$/webapp/source/scripts/partials/event-add.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/scripts/partials/event-detail.html" afterPath="$PROJECT_DIR$/webapp/source/scripts/partials/event-detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/scripts/partials/event-list.html" afterPath="$PROJECT_DIR$/webapp/source/scripts/partials/event-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/scripts/partials/guest-add.html" afterPath="$PROJECT_DIR$/webapp/source/scripts/partials/guest-add.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/index.html" afterPath="$PROJECT_DIR$/webapp/source/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WED2-Miniprojekt.iws" />
@@ -50,8 +48,18 @@
       <file leaf-file-name="event-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.263158" vertical-offset="0" max-vertical-offset="1014">
-              <caret line="60" column="60" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
+            <state vertical-scroll-proportion="-1.3684211" vertical-offset="0" max-vertical-offset="1131">
+              <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event-edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.380953" vertical-offset="0" max-vertical-offset="806">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -60,8 +68,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/source/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.238095" vertical-offset="0" max-vertical-offset="455">
-              <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+            <state vertical-scroll-proportion="-9.904762" vertical-offset="0" max-vertical-offset="481">
+              <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -70,8 +78,8 @@
       <file leaf-file-name="event-list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="507">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="494">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,8 +88,8 @@
       <file leaf-file-name="event-add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.428572" vertical-offset="113" max-vertical-offset="832">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="806">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,28 +98,28 @@
       <file leaf-file-name="guest-add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/guest-add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.380953" vertical-offset="0" max-vertical-offset="416">
-              <caret line="20" column="123" selection-start-line="20" selection-start-column="123" selection-end-line="20" selection-end-column="123" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="390">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/source/styles/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38244048" vertical-offset="55" max-vertical-offset="1274">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state vertical-scroll-proportion="-2.3636363" vertical-offset="416" max-vertical-offset="2301">
+              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/source/scripts/modules/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="755" max-vertical-offset="1482">
-              <caret line="46" column="91" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
+            <state vertical-scroll-proportion="0.59375" vertical-offset="921" max-vertical-offset="1651">
+              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -153,13 +161,14 @@
         <option value="$PROJECT_DIR$/webapp/source/scripts/partials/events.html" />
         <option value="$PROJECT_DIR$/webapp/source/scripts/partials/event.html" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/webapp/source/scripts/modules/app.js" />
         <option value="$PROJECT_DIR$/webapp/source/scripts/partials/event-list.html" />
         <option value="$PROJECT_DIR$/webapp/source/scripts/partials/event-add.html" />
         <option value="$PROJECT_DIR$/webapp/source/scripts/partials/guest-add.html" />
-        <option value="$PROJECT_DIR$/webapp/source/scripts/partials/event-detail.html" />
-        <option value="$PROJECT_DIR$/webapp/source/index.html" />
         <option value="$PROJECT_DIR$/webapp/source/styles/custom.css" />
+        <option value="$PROJECT_DIR$/webapp/source/scripts/partials/event-detail.html" />
+        <option value="$PROJECT_DIR$/webapp/source/scripts/partials/event-edit.html" />
+        <option value="$PROJECT_DIR$/webapp/source/index.html" />
+        <option value="$PROJECT_DIR$/webapp/source/scripts/modules/app.js" />
       </list>
     </option>
   </component>
@@ -587,34 +596,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/images/bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="507">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-detail.html">
+    <entry file="file://$PROJECT_DIR$/webapp/source/styles/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.263158" vertical-offset="0" max-vertical-offset="1014">
-          <caret line="60" column="60" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/scripts/modules/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="755" max-vertical-offset="1482">
-          <caret line="46" column="91" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.238095" vertical-offset="0" max-vertical-offset="455">
-          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        <state vertical-scroll-proportion="-2.3636363" vertical-offset="416" max-vertical-offset="2301">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -627,31 +625,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.380953" vertical-offset="0" max-vertical-offset="806">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.904762" vertical-offset="0" max-vertical-offset="481">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/guest-add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.380953" vertical-offset="0" max-vertical-offset="416">
-          <caret line="20" column="123" selection-start-line="20" selection-start-column="123" selection-end-line="20" selection-end-column="123" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.428572" vertical-offset="113" max-vertical-offset="832">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="806">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/images/bg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/webapp/source/scripts/partials/event-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3684211" vertical-offset="0" max-vertical-offset="1131">
+          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/styles/custom.css">
+    <entry file="file://$PROJECT_DIR$/webapp/source/scripts/modules/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38244048" vertical-offset="55" max-vertical-offset="1274">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.59375" vertical-offset="921" max-vertical-offset="1651">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
           <folding />
         </state>
       </provider>

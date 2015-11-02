@@ -1,73 +1,82 @@
-<div class="events-container col-md-6 col-md-offset-3">
-    <div class="events-header">
-        <h2 class="events-title">Event Detail</h2>
-        <div class="event-nav">
-            <button type="button" class="btn btn-default" ng-click="switchtToGuestAdd(event.id)">
-                add guest <span class="badge">{{ event.guests.length }}</span>
-            </button>
+
+<div class="events-header">
+    <h2 class="events-title">Event Detail</h2>
+    <div class="event-nav">
+        <button type="button" class="btn btn-default" ng-click="switchtToEventEdit(event.id)">
+            edit event
+        </button>
+        <button type="button" class="btn btn-default" ng-click="switchtToGuestAdd(event.id)">
+            add guest <span class="badge">{{ event.guests.length }}</span>
+        </button>
+    </div>
+</div>
+<div class="event-container">
+    <div class="event-header">
+        <h2 class="event-title">Event ID {{ event.id }}</h2>
+    </div>
+    <div class="event-body">
+        <div class="form-group">
+            <label class="control-label">Name:</label>
+            {{ event.name }}</div>
+        <div class="form-group">
+            <label class="control-label">Description:</label>
+            {{ event.description }}</div>
+        <div class="form-group">
+            <label class="control-label">Time:</label>
+            {{ event.times.begin | date : 'dd.MM.yy HH:mm:ss' }} - {{ event.times.end | date : 'dd.MM.yy HH:mm:ss' }}</div>
+        <div class="form-group">
+            <label class="control-label">Target group:</label>
+            {{ event.targetGroup }}</div>
+        <div class="form-group">
+            <label class="control-label">Contributions description:</label>
+            {{ event.contributionsDescription }}</div>
+        <div class="form-group">
+            <label class="control-label">Max. amount of guests:</label>
+            {{ event.maximalAmoutOfGuests }}</div>
+        <div class="form-group">
+            <label class="control-label">Locatioin Name:</label>
+            {{ event.location.name }}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Location street:</label>
+            {{ event.location.street }}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Location plz:</label>
+            {{ event.location.city }} , {{ event.location.plz }}
         </div>
     </div>
-    <div class="event-container">
-        <div class="event-header">
-            <h2 class="event-title">Event ID {{ event.id }}</h2>
-        </div>
-        <div class="event-body">
-            <div class="form-group">
-                <label class="control-label">Name:</label>
-                {{ event.name }}</div>
-            <div class="form-group">
-                <label class="control-label">Description:</label>
-                {{ event.description }}</div>
-            <div class="form-group">
-                <label class="control-label">Time:</label>
-                {{ event.times.begin | date : 'dd.MM.yy HH:mm:ss' }} - {{ event.times.end | date : 'dd.MM.yy HH:mm:ss' }}</div>
-            <div class="form-group">
-                <label class="control-label">Target group:</label>
-                {{ event.targetGroup }}</div>
-            <div class="form-group">
-                <label class="control-label">Contributions description:</label>
-                {{ event.contributionsDescription }}</div>
-            <div class="form-group">
-                <label class="control-label">Max. amount of guests:</label>
-                {{ event.maximalAmoutOfGuests }}</div>
-            <div class="form-group">
-                <label class="control-label">Locatioin Name:</label>
-                {{ event.location.name }}
+    <div class="guest-body" ng-repeat="guest in event.guests">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="/images/user.png" alt="profileImage">
+                </a>
             </div>
-            <div class="form-group">
-                <label class="control-label">Location street:</label>
-                {{ event.location.street }}
-            </div>
-            <div class="form-group">
-                <label class="control-label">Location plz:</label>
-                {{ event.location.city }} , {{ event.location.plz }}
+            <div class="col-lg-6 col-md-5 col-sm-4 col-xs-3">
+                <div class="event-guest-row leftalign" ng-show="guest.name">
+                    <label class="control-label">Name:</label>
+                    {{ guest.name }}</div>
+                <div class="event-guest-row leftalign" ng-show="guest.contribution">
+                    <label class="control-label">Contribution:</label>
+                    {{ guest.contribution }}</div>
+                <div class="event-guest-row leftalign" ng-show="guest.comment">
+                    <label class="control-label">Comment:</label>
+                    {{ guest.comment }}</div>
             </div>
         </div>
-        <div class="guest-body" ng-repeat="guest in event.guests">
-            <div class="row">
-                <div class="col-xs-6 col-md-3">
-                    <a href="#" class="thumbnail">
-                        <img src="/images/user.png" alt="profileImage">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-9">
-                    <div class="event-guest-row leftalign" ng-show="guest.name">
-                        <label class="control-label">Name:</label>
-                        {{ guest.name }}</div>
-                    <div class="event-guest-row leftalign" ng-show="guest.contribution">
-                        <label class="control-label">Contribution:</label>
-                        {{ guest.contribution }}</div>
-                    <div class="event-guest-row leftalign" ng-show="guest.comment">
-                        <label class="control-label">Comment:</label>
-                        {{ guest.comment }}</div>
-                </div>
-            </div>
-            <div class="event-guest-row" ng-show="guest.canceled"><input type="checkbox" ng-true-value="{{ guest.canceled }}" /></div>
-            <div class="event-guest-row rightalign">
-                <button type="button" class="btn btn-default" ng-show="guest" ng-click="deleteGuestFromEvent(event.id, guest.id)">
-                    remove <span class="glyphicon glyphicon-remove-sign"></span>
-                </button>
-            </div>
+        <div class="event-guest-row" ng-show="guest.canceled">
+            <input type="checkbox" ng-true-value="{{ guest.canceled }}" />
+        </div>
+        <br />
+        <br />
+        <div class="event-guest-row rightalign">
+            <button type="button" class="btn btn-default" ng-show="guest" ng-click="editGuestFromEvent(event.id, guest.id)">
+                edit <span class="glyphicon glyphicon-remove-sign"></span>
+            </button>
+            <button type="button" class="btn btn-default" ng-show="guest" ng-click="deleteGuestFromEvent(event.id, guest.id)">
+                delete <span class="glyphicon glyphicon-remove-sign"></span>
+            </button>
         </div>
     </div>
 </div>
