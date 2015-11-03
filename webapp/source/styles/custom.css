@@ -1,6 +1,6 @@
 body {
   marigin: 0;
-  padding: 0;
+  padding: 1em 0 1em 0;
 
   background: url('../images/bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -41,7 +41,7 @@ body {
 .btn-default:hover {
   background: white;
   color: #000000;
-  border: solid 0.1em white;
+  border: solid 0.1em black;
 }
 
 .events-container {

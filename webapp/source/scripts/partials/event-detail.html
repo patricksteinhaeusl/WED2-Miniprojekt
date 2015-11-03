@@ -32,7 +32,7 @@
             {{ event.contributionsDescription }}</div>
         <div class="form-group">
             <label class="control-label">Max. amount of guests:</label>
-            {{ event.maximalAmoutOfGuests }}</div>
+            {{ event.maxAmountOfGuests }}</div>
         <div class="form-group">
             <label class="control-label">Locatioin Name:</label>
             {{ event.location.name }}
@@ -42,8 +42,12 @@
             {{ event.location.street }}
         </div>
         <div class="form-group">
+            <label class="control-label">Location city:</label>
+            {{ event.location.city }}
+        </div>
+        <div class="form-group">
             <label class="control-label">Location plz:</label>
-            {{ event.location.city }} , {{ event.location.plz }}
+            {{ event.location.plz }}
         </div>
     </div>
     <div class="guest-body" ng-repeat="guest in event.guests">

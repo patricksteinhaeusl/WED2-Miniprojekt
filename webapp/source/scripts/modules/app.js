@@ -42,7 +42,10 @@
         $http.get('/api/events/' + eventId).success(callback);
       },
       addEvent: function(event, callback) {
-        $http.post('/api/events/', {id : event.id, name : event.name, description : event.description, targetGroup : event.targetGroup, contributionDescription : event.contributionsDescription, location : event.location, times : event.times}).success(callback);
+        $http.post('/api/events/', {id : event.id, name : event.name, description : event.description, targetGroup : event.targetGroup, contributionDescription : event.contributionsDescription, maxAmountOfGuests : event.maxAmountOfGuests, location : event.location, times : event.times}).success(callback);
+      },
+      editEvent: function(event, callback) {
+        $http.post('/api/events/' + event.id, {id : event.id, name : event.name, description : event.description, targetGroup : event.targetGroup, contributionDescription : event.contributionsDescription, maxAmountOfGuests : event.maxAmountOfGuests, location : event.location, times : event.times}).success(callback);
       },
       deleteGuestFromEvent: function(eventId, guestId, callback) {
         $http.delete('/api/events/' + eventId + "/guests/" + guestId).success(callback);
@@ -100,11 +103,17 @@
     };
   });
 
-  app.controller('EventEditController', function($scope, $location, Event) {
-    console.log("blub");
-    Event.getOne(event.id, function(data) {
-      console.log(data);
+  app.controller('EventEditController', function($scope, $location, $routeParams, Event) {
+    Event.getOne($routeParams.id, function(data) {
+      $scope.event = data;
     });
+
+    $scope.edit = function(event) {
+      $scope.master = angular.copy(event);
+      Event.editEvent(event, function(data) {
+        $location.url("/events/" + $routeParams.id);
+      });
+    };
   });
 
   app.controller('GuestAddController', function($scope, $location, $routeParams, Event) {
